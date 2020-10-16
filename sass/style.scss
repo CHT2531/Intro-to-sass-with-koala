@@ -1,9 +1,16 @@
+@import 'vars';
+
+/*
+Please note this uses @import see https://sass-lang.com/documentation/at-rules/import
+This is because Koala doesn't support the @use feature of Sass
+*/
+
 h1,h2,h3{
-  font-family:Arial;
+  font-family:$main-font;
 }
 
 a{
-    color:red;
+    color:$main-colour;
     text-decoration:none;
 }
 
@@ -12,35 +19,44 @@ a{
   border:1px solid;
 }
 
-.news-item{
+%news-item{
     margin:10px;
     width:75%;
     padding:20px;
 }
 
 .news-item-left{
+  @extend %news-item;
   float:left;
 }
 
 .news-item-right{
+  @extend %news-item;
   float:right;
 }
 .contrast-link{
-  color:white;
+  color:$contrast-colour;
 }
-.content-block{
+
+%content-block{
   padding:20px;
   border-radius:10px;
   margin:10px;
 }
 
 .contrast-block{
-    background-color:red;
+    background-color:$main-colour;
 }
 
 .header{
-    text-align:center;
+  @extend %content-block;
+  text-align:center;
 }
+.footer{
+  @extend %content-block;
+}
+
 .main-content{
-    overflow:auto;
+  @extend %content-block;
+  overflow:auto;
 }

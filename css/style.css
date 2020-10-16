@@ -1,0 +1,55 @@
+/*
+Please note this uses @import see https://sass-lang.com/documentation/at-rules/import
+This is because Koala doesn't support the @use feature of Sass
+*/
+h1, h2, h3 {
+  font-family: Arial;
+}
+
+a {
+  color: #ff00ee;
+  text-decoration: none;
+}
+
+.border {
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.news-item-left, .news-item-right {
+  margin: 10px;
+  width: 75%;
+  padding: 20px;
+}
+
+.news-item-left {
+  float: left;
+}
+
+.news-item-right {
+  float: right;
+}
+
+.contrast-link {
+  color: #ffffff;
+}
+
+.header, .footer, .main-content {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.contrast-block {
+  background-color: #ff00ee;
+}
+
+.header {
+  text-align: center;
+}
+
+.main-content {
+  overflow: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
